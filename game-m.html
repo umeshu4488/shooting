@@ -1,0 +1,90 @@
+<!DOCTTYPE html>
+<html lan="en">
+<head>
+    <meta charset="utf-8">
+    <title>Play Shooting Game as Boy</title>
+    <link rel="stylesheet" href="stylesheets/styles2.css">
+    <meta name="view" content="width=device-width,initial-scale=1">    
+</head>
+<body id="body">
+    <span id="winner"></span>
+    <div class="prestart">
+    <div class="start">
+            <ul>
+                <li><img src="img/gun.png" alt="gun"></li>
+                <li><img src="img/ball.png" alt="ball"></li>
+                <li><img src="img/man.png" alt="man"></li>
+                <li><img src="img/woman.png" alt="woman"></li>
+                <li><img src="img/dog.png" alt="dog"></li>            
+            </ul>
+    </div>
+    </div>
+    <h2>Escape from bullet!!</h2>
+    <p>
+        In case of hit to bullet, the game becomes over.<br>
+        After you can completely escape from bullet for 1 min, you are winner.<br>
+        Choose your favorite character.<br>
+        <span class="attention">(Please use PC. Smartphone screen cannot be shown clearly and character cannot be moved.)<br></span>
+
+        <span id="strong">Are you ready?　 → </span><input type="submit" name="start" value="Start!" id="start">
+    </p>
+    <div class="game">
+
+        <table border="1">
+            <caption>Shooting Game</caption>
+            <tr>
+                <td rowspan="3" class="gunplace">
+                    <ul>
+                        <li><img src="img/gun.png" alt="gun" id="gun"></li>
+                        <li><img src="img/ball.png" alt="ball" id="ball0"></li>
+                    </ul>
+                </td>
+                <td class="balluserplace">
+                    <ul>
+                        <li><img src="img/white.png" alt="white" class="white"></li>                            
+                        <li><img src="img/ball.png" alt="ball" id="ball1"></li>
+                        <li class="user"><img src="img/man.png" alt="man" id="user1" onkeydown="move(e)">
+                        <button type="submit" name="move1" value="Click here to escape from bullet" id="move1" class="move">Click here <br>to escape from bullet</button>
+                        <span><img src="img/fire.png" alt="gameover" id="fire1" class="fire"></span></li>
+                    </ul>
+                </td>
+                <td rowspan="3" class="fieldpace">
+                    <fieldset>
+                            <legend>keyboard<br>press</legend>
+                            <p>"<span>u</span>" : <span>go up</span></p>
+                            <p>"<span>d</span>" : <span>go down</span></p>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td class="balluserplace">
+                    <ul>
+                        <li><img src="img/white.png" alt="white" class="white"></li>                            
+                        <li><img src="img/ball.png" alt="ball" id="ball2"></li>
+                        <li class="user"><img src="img/man.png" alt="man" id="user2" onkeydown="move(e)">
+                        <button type="submit" name="move2" value="Click here to escape from bullet" id="move2" class="move">Click here <br>to escape from bullet</button>
+                        <span><img src="img/fire.png" alt="gameover" id="fire2" class="fire"></span>
+                        <span id="count"></span>    <!--added later-->
+                        <span id="time"></span>    <!--added later-->
+                        <span id="gameover"></span></li>    <!--added later-->                        
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td class="balluserplace">
+                    <ul>
+                        <li><img src="img/white.png" alt="white" class="white"></li>
+                        <li><img src="img/ball.png" alt="ball" id="ball3"></li>
+                        <li class="user"><img src="img/man.png" alt="man" id="user3" onkeydown="move(e)">
+                        <button type="submit" name="move3" value="Click here to escape from bullet" id="move3" class="move">Click here <br>to escape from bullet</button>
+                        <span><img src="img/fire.png" alt="gameover" id="fire3" class="fire"></span></li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <input type="submit" name="mainmenu" value="back to main menu" id="mainmenu">    
+    <input type="submit" name="character" value="back to character selection" id="character">    
+    <script src="javascript/java2-m.js" type="text/javascript"></script>    
+</body>
+</html>
